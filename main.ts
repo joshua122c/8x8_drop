@@ -7,7 +7,7 @@ input.onButtonPressed(Button.A, function () {
 input.onButtonPressed(Button.B, function () {
     target_x = Math.floor(taeget[ball_num] / 10)
     target_y = taeget[ball_num] % 10
-    if (ball_x > target_x && ball_y > target_y) {
+    while (ball_x > target_x && ball_y > target_y) {
         max7219_matrix.setValueInMatrix(
         scr,
         ball_x,
@@ -34,7 +34,7 @@ input.onButtonPressed(Button.B, function () {
             ball_y += -1
         }
     }
-    if (ball_x * 10 + ball_y != taeget[ball_num]) {
+    while (ball_x * 10 + ball_y != taeget[ball_num]) {
     	
     }
     max7219_matrix.setValueInMatrix(
